@@ -11,6 +11,6 @@ console.log("hello")
 
 // app.appendChild(header)
 
-const app document.getElementById('app');
+const app = document.getElementById('app');
 const root = ReactDOM.createRoot(app);
 root.render(<h1>Text from ReactCDN</h1>);
