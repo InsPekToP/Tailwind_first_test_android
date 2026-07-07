@@ -11,6 +11,23 @@ console.log("hello")
 
 // app.appendChild(header)
 
-const app = document.getElementById('app');
-const root = ReactDOM.createRoot(app);
-root.render(<h1>Text from ReactCDN</h1>);
+const domNode = document.getElementById('app');
+
+function Header() {
+  return <h1>Text from function header()</h1>
+}
+
+function HomePage() {
+  return(
+    <div>
+      {/*Nesting the Header component*/}
+      <Header/>
+      <Header/>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(domNode);
+//root.render(<h1>Text from ReactCDN</h1>);
+//React компоненты пишутся с Большой буквы и скобками
+root.render(<HomePage/>);
